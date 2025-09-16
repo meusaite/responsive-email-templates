@@ -58,12 +58,11 @@ jobs:
 
       - name: Make image public
         run: |
-          package_name=$(echo "${{ steps.meta.outputs.tags }}" | head -n1 | cut -d'/' -f3 | cut -d':' -f1)
           gh api \
             --method PATCH \
             -H "Accept: application/vnd.github+json" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
-            "/orgs/${{ github.repository_owner }}/packages/container/${package_name}" \
+            "/user/packages/container/${{ env.IMAGE_NAME }}" \
             -f visibility='public' || true
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
