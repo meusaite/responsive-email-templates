@@ -1,6 +1,6 @@
 FROM caddy:2.9.1
 
-COPY . /templates
+COPY volumes/templates/* /templates/
 
 EXPOSE 80
 
