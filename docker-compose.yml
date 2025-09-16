@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  templates-server:
+    image: caddy:2.9.1
+    volumes:
+      - ./volumes/templates:/templates
+    entrypoint: caddy file-server -r /templates --listen :80
+    ports:
+      - "8080:80"

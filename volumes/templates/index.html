@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive HTML Email Templates</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            color: #2F67F6;
+            margin-bottom: 10px;
+        }
+        .header p {
+            color: #666;
+            font-size: 16px;
+        }
+        .template-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .template-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .template-card:hover {
+            transform: translateY(-2px);
+        }
+        .template-card h3 {
+            margin-top: 0;
+            color: #2F67F6;
+            font-size: 18px;
+        }
+        .template-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .template-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #2F67F6;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        .template-link:hover {
+            background-color: #1a56db;
+        }
+        .template-link.portuguese {
+            background-color: #28a745;
+        }
+        .template-link.portuguese:hover {
+            background-color: #1e7e34;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #2F67F6;
+            padding-bottom: 10px;
+            color: #2F67F6;
+        }
+        .pt-br {
+            color: #8A7FD8 !important;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Responsive HTML Email Templates</h1>
+        <h1 class="pt-br">Modelos de E-mail HTML Responsivos</h1>
+        <p>Free email templates for startups and SaaS companies</p>
+        <p class="pt-br">Modelos de e-mail gratuitos para startups e empresas SaaS</p>
+    </div>
+
+    <div class="section">
+        <h2>Available Templates / <span class="pt-br">Modelos Disponíveis</span></h2>
+        <div class="template-grid">
+            <div class="template-card">
+                <h3>Welcome Email / <span class="pt-br">E-mail de Boas-vindas</span></h3>
+                <p>New user welcome email with login call-to-action button.</p>
+                <p class="pt-br">E-mail de boas-vindas para novos usuários com botão de login.</p>
+                <div class="template-links">
+                    <a href="welcome.html" target="_blank" class="template-link">English</a>
+                    <a href="welcome-pt_BR.html" target="_blank" class="template-link portuguese">Português (BR)</a>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <h3>Confirm Email / <span class="pt-br">Confirmar E-mail</span></h3>
+                <p>Email address verification template with confirmation button.</p>
+                <p class="pt-br">Modelo de verificação de endereço de e-mail com botão de confirmação.</p>
+                <div class="template-links">
+                    <a href="confirm-email.html" target="_blank" class="template-link">English</a>
+                    <a href="confirm-email-pt_BR.html" target="_blank" class="template-link portuguese">Português (BR)</a>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <h3>Reset Password / <span class="pt-br">Redefinir Senha</span></h3>
+                <p>Password reset instructions with secure reset button.</p>
+                <p class="pt-br">Instruções de redefinição de senha com botão seguro de redefinição.</p>
+                <div class="template-links">
+                    <a href="reset-password.html" target="_blank" class="template-link">English</a>
+                    <a href="reset-password-pt_BR.html" target="_blank" class="template-link portuguese">Português (BR)</a>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <h3>Invoice / <span class="pt-br">Fatura</span></h3>
+                <p>Order confirmation with itemized billing table and payment details.</p>
+                <p class="pt-br">Confirmação de pedido com tabela de faturamento detalhada e informações de pagamento.</p>
+                <div class="template-links">
+                    <a href="invoice.html" target="_blank" class="template-link">English</a>
+                    <a href="invoice-pt_BR.html" target="_blank" class="template-link portuguese">Português (BR)</a>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <h3>Cancelled Subscription / <span class="pt-br">Assinatura Cancelada</span></h3>
+                <p>Subscription cancellation notice with reactivation option.</p>
+                <p class="pt-br">Aviso de cancelamento de assinatura com opção de reativação.</p>
+                <div class="template-links">
+                    <a href="cancelled-subscription.html" target="_blank" class="template-link">English</a>
+                    <a href="cancelled-subscription-pt_BR.html" target="_blank" class="template-link portuguese">Português (BR)</a>
+                </div>
+            </div>
+
+            <div class="template-card">
+                <h3>Trial Expired / <span class="pt-br">Período de Teste Expirado</span></h3>
+                <p>Trial period expiration notification with upgrade options.</p>
+                <p class="pt-br">Notificação de expiração do período de teste com opções de upgrade.</p>
+                <div class="template-links">
+                    <a href="trial-expired.html" target="_blank" class="template-link">English</a>
+                    <a href="trial-expired-pt_BR.html" target="_blank" class="template-link portuguese">Português (BR)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Features / <span class="pt-br">Características</span></h2>
+        <ul>
+            <li><strong>Responsive Design / <span class="pt-br">Design Responsivo:</span></strong> Optimized for desktop and mobile devices / <span class="pt-br">Otimizado para dispositivos desktop e móveis</span></li>
+            <li><strong>Email Client Compatible / <span class="pt-br">Compatível com Clientes de E-mail:</span></strong> Works with all major ESPs (MailChimp, SendGrid, etc.) / <span class="pt-br">Funciona com todos os principais ESPs (MailChimp, SendGrid, etc.)</span></li>
+            <li><strong>Cross-Platform / <span class="pt-br">Multi-plataforma:</span></strong> Compatible with Outlook, Gmail, Apple Mail, and more / <span class="pt-br">Compatível com Outlook, Gmail, Apple Mail e mais</span></li>
+            <li><strong>Customizable / <span class="pt-br">Personalizável:</span></strong> Easy to modify with your branding and content / <span class="pt-br">Fácil de modificar com sua marca e conteúdo</span></li>
+            <li><strong>Multiple Languages / <span class="pt-br">Múltiplos Idiomas:</span></strong> Available in English and Portuguese (Brazil) / <span class="pt-br">Disponível em Inglês e Português (Brasil)</span></li>
+        </ul>
+    </div>
+</body>
+</html>
