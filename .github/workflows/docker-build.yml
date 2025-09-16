@@ -3,15 +3,15 @@ name: Build Docker Image
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
   release:
     types: [published]
 
 env:
-  IMAGE_NAME: meusaite-email-templates
+  IMAGE_NAME: responsive-html-email-templates
 
 jobs:
   build:
@@ -32,7 +32,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.GH_TOKEN }}
 
       - name: Extract metadata
         id: meta
