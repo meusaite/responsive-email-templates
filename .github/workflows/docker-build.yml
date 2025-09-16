@@ -58,11 +58,24 @@ jobs:
 
       - name: Make image public
         run: |
-          gh api \
+          # Wait for package to be available
+          sleep 10
+          
+          # Try organization endpoint first
+          if ! gh api \
             --method PATCH \
             -H "Accept: application/vnd.github+json" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
-            "/user/packages/container/${{ env.IMAGE_NAME }}" \
-            -f visibility='public' || true
+            "/orgs/${{ github.repository_owner }}/packages/container/${{ env.IMAGE_NAME }}" \
+            -f visibility='public'; then
+            
+            # Fallback to user endpoint
+            gh api \
+              --method PATCH \
+              -H "Accept: application/vnd.github+json" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              "/user/packages/container/${{ env.IMAGE_NAME }}" \
+              -f visibility='public' || echo "Failed to make package public - you may need to manually set visibility in GitHub"
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
